@@ -1,1 +1,1 @@
-# -powerpoint-emulator-advanced.
+# powerpoint-emulator-advanced.
