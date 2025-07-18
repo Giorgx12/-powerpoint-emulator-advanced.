@@ -1,1 +1,45 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<title>PowerPoint Emulatore Avanzato</title>
+<link rel="stylesheet" href="{% static 'powerapp/style.css' %}">
+</head>
+<body>
+<h1>PowerPoint Emulatore Web Avanzato</h1>
+<div>
+    <button onclick="addSlide()">Aggiungi Diapositiva</button>
+    <button onclick="deleteSlide()">Elimina Diapositiva</button>
+    <button onclick="exportSlides()">Esporta come Immagine</button>
+    <button onclick="savePresentation()">Salva Presentazione</button>
+    <button onclick="loadPresentation()">Carica Presentazione</button>
+</div>
+<div id="slide-container"></div>
+<div style="margin-top:20px;">
+    <button onclick="prevSlide()">Precedente</button>
+    <button onclick="nextSlide()">Successivo</button>
+</div>
 
+<!-- Modale per inserire testo -->
+<div id="text-modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2>Inserisci Testo</h2>
+    <textarea id="text-input" rows="4" cols="50"></textarea>
+    <button onclick="applyText()">Applica</button>
+  </div>
+</div>
+
+<!-- Modale per caricare presentazione -->
+<div id="load-modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeLoadModal()">&times;</span>
+    <h2>Carica Presentazione</h2>
+    <input type="text" id="load-id" placeholder="Inserisci ID presentazione" />
+    <button onclick="confirmLoad()">Carica</button>
+  </div>
+</div>
+
+<script src="{% static 'powerapp/script.js' %}"></script>
+</body>
+</html>
